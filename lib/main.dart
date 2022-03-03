@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Services.dart';
+import 'login.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -20,6 +21,7 @@ initialRoute: '/',
       routes:  {
         '/': (context) => Home(),
         '/Service': (context) => Service(),
+        '/login': (context) => login(),
       },
     );
   }
@@ -40,15 +42,19 @@ class _HomeState extends State<Home> {
         title: const Text('Home'),
         centerTitle: true,
         leading: IconButton(onPressed: (){
-          Navigator.pushNamed(context, '/Service');
+          Navigator.pushNamed(context, '/login');
         },
-          icon:Icon(Icons.cleaning_services_outlined),
+          icon:Icon(Icons.login_outlined),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: Icon(Icons.holiday_village_outlined),label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.cleaning_services_outlined),label: 'Service'),
-        BottomNavigationBarItem(icon: Icon(Icons.more_horiz_outlined),label: 'More'),
+
+
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+      BottomNavigationBarItem(icon: Icon(Icons.holiday_village_outlined),label: 'Home'),
+       BottomNavigationBarItem(icon: Icon(Icons.cleaning_services_outlined),label: 'Service'),
+       BottomNavigationBarItem(icon: Icon(Icons.store_outlined),label: 'Store'),
+       // BottomNavigationBarItem(icon: Icon(Icons.more_horiz_outlined),label: 'More'),
       ],
       ),
     ),
