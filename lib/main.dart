@@ -32,7 +32,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return SafeArea(child:  Scaffold(
       appBar: AppBar(
         elevation: 0,
           foregroundColor: Colors.red,
@@ -51,6 +51,7 @@ class _HomeState extends State<Home> {
         BottomNavigationBarItem(icon: Icon(Icons.more_horiz_outlined),label: 'More'),
       ],
       ),
+    ),
     );
   }
 }

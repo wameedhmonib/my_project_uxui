@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Service extends StatefulWidget {
@@ -9,11 +10,17 @@ class Service extends StatefulWidget {
 class _ServiceState extends State<Service> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar:AppBar(
+    return SafeArea(child: Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        foregroundColor: Colors.red,
+        backgroundColor: Colors.transparent,
+        title: const Text('Service'),
+        centerTitle: true,
+      ),
 
-      ) ,
 
+    ),
     );
   }
 }
